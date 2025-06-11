@@ -11,7 +11,15 @@ def load_data():
     Returns:
         DataFrame: The loaded Titanic dataset.
     """
-    pass
+    
+    global_path = "./data/"
+    file_train = "train.csv"
+    file_test = "test.csv"
+    path_train = global_path+file_train
+    path_test = global_path+file_test
+    X_train = pd.read_csv(path_train)
+    X_test = pd.read_csv(path_test)
+    return X_train, X_test
        
 def clean_data(df):
     """
@@ -24,6 +32,7 @@ def clean_data(df):
         DataFrame: The preprocessed Titanic dataset.
     """
     pass
+
 
 def prepare_data(df:pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]: 
     """
